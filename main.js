@@ -1,8 +1,8 @@
 const path = require('path');
 
-var Settings = function (path) {
-  if (path) {
-    this.localSettings = path;
+var Settings = function (localPath) {
+  if (localPath) {
+    this.localSettings = localPath;
   } else {
     this.localSettings = path.join(__dirname, 'settings.json');
   }
