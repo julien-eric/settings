@@ -1,7 +1,11 @@
 const path = require('path');
 
-var Settings = function () {
-  this.localSettings = path.join(__dirname, settings.json);
+var Settings = function (path) {
+  if (path) {
+    this.localSettings = path;
+  } else {
+    this.localSettings = path.join(__dirname, 'settings.json');
+  }
 };
 
 Settings.prototype.get = function (settingName) {
